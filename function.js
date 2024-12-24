@@ -1,19 +1,30 @@
-//function declaration
-function add(a,b){
-  console.log(a+b);
+// 4 Types of Functions: 
+
+//1.Functions without input and without return:
+function add(){
+  var a = 10;
+  var b = 20;
+  console.log("Additions is: ",a+b);
 }
-add(200,200);
+add();
 
-//function expression:
-const sub = function(a,b){
-  console.log(a-b);
+//2. Functions with Input and Without return
+function sub(x,y){
+  console.log("Subtraction is: ",x-y);//100
 }
-sub(200,100);
+sub(200,100)
 
-//arrow function:
-const mul = (a,b) => console.log(a * b);
-mul(10,20);
+//3. Functions Without Input and With return
+function mul(){
+  var p = 300;
+  var q = 100;
+  return p * q;
+}
+let result = mul();
+console.log("Multiplication is: ",result);
 
-const msg = () => "Hello World";
-let res = msg();
-console.log(res);
+//4. Functions With Input and With return
+function div(a,b){
+  return a/b;
+}
+console.log("This Division is: ",div(500,10))
